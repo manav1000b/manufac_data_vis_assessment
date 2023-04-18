@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import Loading from './components/shared/Loading';
-const App = lazy(() => import(`./App`));
+const App = lazy(() => import(`./App`)); // webpack code splitting
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(

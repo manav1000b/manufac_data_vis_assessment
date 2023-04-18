@@ -1,24 +1,21 @@
-import { Suspense, lazy, memo, useEffect } from 'react';
+import { lazy, memo } from 'react';
 
 import './App.css';
+
+// this import is not correct. Actual data would be fetched from the server
 import data from './data/Wine-Data.json';
 
 import { Data } from './types';
 
-import Loading from './components/shared/Loading';
-
-const ScatterPlotChart = lazy(() => import(`./components/ScatterPlotChart`));
-const BarChart = lazy(() => import(`./components/BarChart`));
+const ScatterPlotChartComponent = lazy(() => import(`./components/ScatterPlotChart`));
+const BarChartComponent = lazy(() => import(`./components/BarChart`));
 
 function App() {
   return (
     <div id='app'>
-      <Suspense fallback={<Loading id='scatter-loader' />}>
-        <ScatterPlotChart data={data as Array<Data>} />
-      </Suspense>
-      <Suspense fallback={<Loading id='bar-chart-loader' />}>
-        <BarChart data={data as Array<Data>} />
-      </Suspense>
+      {/* Suspense can be added for a fallback UI while loading dynamically */}
+      <ScatterPlotChartComponent data={data as Array<Data>} />
+      <BarChartComponent data={data as Array<Data>} />
     </div>
   );
 }
