@@ -18,6 +18,7 @@
 @media only screen and (min-width: 1025px) {
   #scatter-plot-chart-container,
   #bar-chart-container {
+    flex: auto;
     max-width: 50%;
   }
 }
@@ -45,7 +46,6 @@
 
 #scatter-plot-chart-container,
 #bar-chart-container {
-  flex: auto;
   height: 20rem;
   min-height: 20rem;
 
