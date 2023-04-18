@@ -1,5 +1,7 @@
 import { memo } from 'react';
 
-export default memo(function BarChart(): JSX.Element {
+import { Data } from '../types';
+
+export default memo(function BarChart(props: { data: Array<Data> }): JSX.Element {
   return <div id='bar-chart-container'></div>;
 });
