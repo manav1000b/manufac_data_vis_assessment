@@ -14,6 +14,8 @@ yarn run start
 
 ### Build production files
 
+_(creates assets: HTML, CSS, JS etc. in the build folder)_
+
 ```
 yarn run build
 ```
