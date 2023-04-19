@@ -1,6 +1,7 @@
 # Data Visualisation Project
 
 ## Screenshots
+![Screenshot](./charts_ss_1.png?raw=true "Screenshot")
 
 ## CLI Commands for the project
 
